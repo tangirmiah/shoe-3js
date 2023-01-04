@@ -1,7 +1,7 @@
-import React, { Suspense, useState } from 'react';
+import React, { Suspense } from 'react';
 import { Canvas } from '@react-three/fiber';
 
-import { Float, OrbitControls, Stage } from '@react-three/drei';
+import { OrbitControls, Stage } from '@react-three/drei';
 
 import { Shoe } from './components/Shoe';
 import ColorPicker from './components/ColorPicker';
