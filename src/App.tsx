@@ -6,6 +6,7 @@ import { OrbitControls, Stage } from '@react-three/drei';
 import { Shoe } from './components/Shoe';
 import ColorPicker from './components/ColorPicker';
 import { ColorProvider } from './appContext';
+import { InfinitySpin } from 'react-loader-spinner';
 
 
 
@@ -27,7 +28,10 @@ function App() {
           <ColorPicker item='band' />
           <ColorPicker item='patch' />
         </div>
-        <Suspense fallback={<span className='z-50 h-screen w-screen bg-black'>Loading</span>}>
+        <Suspense fallback={<div className='z-50 h-screen w-screen flex justify-center items-center'><InfinitySpin
+          width='200'
+          color="white"
+        /></div>}>
           <Canvas shadows className='relative z-0'>
             <OrbitControls />
             <Stage environment={'forest'}>
